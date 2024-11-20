@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="190000037"
+    android:versionName="1.9.00.37"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.samsung.knox.securefolder"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="33"
+        android:targetSdkVersion="34"/>
+    <uses-feature android:name="com.samsung.android.api.version.3301"/>
+    <uses-feature android:name="com.samsung.android.knox.knoxsdk.api.level.36"/>
+    <uses-feature android:name="com.samsung.feature.samsung_experience_mobile"/>
+    <uses-permission android:name="com.sec.android.app.launcher.permission.HIDE_SECUREFOLDER"/>
+    <uses-permission android:name="com.samsung.android.aliveprivacy.permission.ENABLE_CS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.GET_INTENT_SENDER_INTENT"/>
+    <uses-permission android:name="com.sec.android.diagmonagent.permission.DIAGMON"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <permission
+        android:name="com.samsung.knox.securefolder.COMMON"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.samsung.knox.securefolder.QUICK_SWITCH"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="com.samsung.android.app.calendar.permission.USE_VCAL_COMPONENT"/>
+    <uses-permission android:name="com.samsung.android.app.calendar.permission.USE_ICALENDAR_SERVICE"/>
+    <uses-permission android:name="com.sec.android.app.calendar.permission.WRITE_CALENDAR_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="com.sec.android.app.contact.permission.CONTACT_SETTINGS"/>
+    <uses-permission android:name="com.wssnps.permission.COM_WSSNPS"/>
+    <uses-permission android:name="com.samsung.knox.bnr.permission.ACCESS"/>
+    <uses-permission android:name="com.sec.android.app.sbrowser.permission.BACKUP_RESTORE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.samsung.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.samsung.android.app.notes.sync.STATE_READ"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_CONTAINER_RCP"/>
+    <uses-permission android:name="com.sec.knox.bridge.permission.FILE_OPERATION_HANDLER"/>
+    <uses-permission android:name="com.samsung.android.app.notes.READ"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.sec.android.app.myfiles.permission.READ"/>
+    <uses-permission android:name="com.samsung.android.app.notes.DELETE"/>
+    <uses-permission android:name="com.sec.android.gallery3d.provider2.READ"/>
+    <permission
+        android:name="com.samsung.knox.rcp.permission.ACCESS_KNOX_CONTENT_MGR_DB_PROVIDER"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.samsung.knox.securefolder.REMOTE_CONTENT_PROVIDER"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.sec.knox.permission.KEYGUARD_SERVICE"/>
+    <uses-permission android:name="com.samsung.android.settings.intelligence.READ_SETTINGS_SEARCH_DATA_PROVIDER"/>
+    <queries>
+        <package android:name="com.samsung.android.mobileservice"/>
+        <package android:name="com.osp.app.signin"/>
+    </queries>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="com.android.permission.INSTALL_EXISTING_PACKAGES"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC_INTERNAL"/>
+    <uses-permission android:name="com.samsung.android.permission.FINGERPRINT_LOCK_SETTINGS"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_CONTAINER"/>
+    <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS"/>
+    <uses-permission android:name="android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="com.samsung.sea.retailagent.permission.RETAILMODE"/>
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <permission
+        android:name="com.samsung.knox.securefolder.backuprestore.SS_ACCESS"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.samsung.knox.bnr.permission.ACCESS"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.samsung.knox.securefolder.KNOX_FRAMEWORK"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.MANAGE_NOTIFICATIONS"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="android.permission.ACCESS_KEYGUARD_SECURE_STORAGE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <permission
+        android:name="com.samsung.knox.securefolder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.samsung.knox.securefolder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.samsung.android.mobileservice.social.common.provider.opensession.permission.READ"/>
+    <application
+        android:theme="@style/Theme.SecureFolder"
+        android:label="@string/secure_folder_app_name"
+        android:icon="@drawable/sf_app_icon_00"
+        android:name="com.samsung.knox.securefolder.SecureFolderApplication"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="theming-meta"
+            android:value="theme_meta_data"/>
+        <meta-data
+            android:name="theming-meta-define1"
+            android:resource="@xml/theme_meta_data"/>
+        <meta-data
+            android:name="theming-templates"
+            android:resource="@raw/color_palette"/>
+        <uses-library
+            android:name="knoxsdk"
+            android:required="false"/>
+        <meta-data
+            android:name="com.samsung.knox.securefolder.enable"
+            android:value="true"/>
+        <meta-data
+            android:name="rcpFileCopier"
+            android:value=""/>
+        <meta-data
+            android:name="support_remote_backup"
+            android:value="true"/>
+        <meta-data
+            android:name="support_smartswitch_backup"
+            android:value="2"/>
+        <meta-data
+            android:name="com.samsung.android.icon_container.has_icon_container"
+            android:value="true"/>
+        <meta-data
+            android:name="com.samsung.android.icon_container.feature_appicon"
+            android:value="COLOR_NO_ADAPTIVE"/>
+        <meta-data
+            android:name="com.samsung.android.hasZippedOverlays"
+            android:value="true"/>
+        <meta-data
+            android:name="SamsungBasicInteraction"
+            android:value="SEP10"/>
+        <meta-data
+            android:name="com.samsung.android.chn.removable_app.shortcut_badge"
+            android:value="true"/>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.samsung.knox.securefolder.keyguard.KnoxKeyguardSamsungAccountBridge"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:label="@string/sf_half_app_name"
+            android:name="com.samsung.knox.securefolder.presentation.switcher.view.SecureFolderShortcutActivity"
+            android:enabled="false"
+            android:exported="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.samsung.android.multiuser.install_only_owner"
+                android:value="true"/>
+        </activity>
+        <activity-alias
+            android:name="com.samsung.knox.securefolder.switcher.SecureFolderShortcutActivity"
+            android:exported="true"
+            android:targetActivity="com.samsung.knox.securefolder.presentation.switcher.view.SecureFolderShortcutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@style/SwitchAliasActivityTheme"
+            android:name="com.samsung.knox.securefolder.quickswitch.QuickSwitchActivity"
+            android:permission="com.samsung.knox.securefolder.QUICK_SWITCH"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.knox.securefolder.QUICK_SWITCH_ACTION"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.samsung.knox.securefolder.receiver.EmergencyStateChangedReceiver"
+            android:permission="com.samsung.knox.securefolder.COMMON"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.intent.action.EMERGENCY_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.receiver.LocaleChangeBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.receiver.ThemeApplyBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.samsung.android.theme.themecenter.THEME_APPLY"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.receiver.ColorThemeChangeBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.samsung.knox.securefolder.intent.action.COLOR_THEME_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.receiver.BootCompleteReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.containeragent.detector.KnoxDeviceAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin"/>
+        </receiver>
+        <provider
+            android:name="com.samsung.knox.securefolder.provider.SecureFolderProvider"
+            android:exported="false"
+            android:authorities="com.samsung.knox.securefolder.internal.provider"/>
+        <provider
+            android:name="com.samsung.knox.securefolder.provider.ExternalAccessProvider"
+            android:permission="com.samsung.knox.securefolder.KNOX_FRAMEWORK"
+            android:exported="true"
+            android:authorities="com.samsung.knox.securefolder.provider.removecontainer"
+            android:directBootAware="true"/>
+        <provider
+            android:name="com.samsung.knox.securefolder.provider.ExternalProvider"
+            android:permission="com.samsung.knox.securefolder.COMMON"
+            android:exported="true"
+            android:authorities="com.samsung.knox.securefolder.externalprovider"/>
+        <provider
+            android:name="com.sec.android.diagmonagent.log.provider.DiagMonProvider"
+            android:permission="com.sec.android.diagmonagent.permission.PROVIDER"
+            android:exported="true"
+            android:authorities="com.sec.android.log.5rwsdnntjy"/>
+        <service
+            android:label="@string/sf_app_name_qp"
+            android:icon="@drawable/quick_panel_icon"
+            android:name="com.samsung.knox.securefolder.switcher.SecureFolderTile"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.SEM_DEFAULT_TILE_NAME"
+                android:value="SecureFolder"/>
+            <meta-data
+                android:name="android.service.quicksettings.SEM_DEFAULT_TILE_UNLOCK_POLICY"
+                android:value="NONE"/>
+            <meta-data
+                android:name="android.service.quicksettings.SEM_DEFAULT_TILE_USER_POLICY"
+                android:value="OWNER"/>
+            <meta-data
+                android:name="android.service.quicksettings.SEM_ACTIVE_TILE_SUPPORT_SEM_PLATFORM_VER"
+                android:value="130100"/>
+        </service>
+        <service
+            android:name="com.samsung.knox.securefolder.backuprestore.remotebackup.SFRemoteBackupService"
+            android:permission="com.samsung.knox.bnr.permission.ACCESS"
+            android:exported="true"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="com.samsung.knox.bnr.remote_backup_request"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:label="@string/backup_and_restore"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.BackupRestoreActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:label="@string/backup_and_restore"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.RestoreActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:label="@string/backup_and_restore"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.BackupActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:label="@string/backup_and_restore"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.DeleteBackupDeviceActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:label="@string/app_name"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.BackupItemSelectionActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder.SFBNRForSS"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/Theme.ExtendedAppBarSupport.ActionBar"
+            android:label="@string/confirm_secure_folder_password"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.SmartSwitchPasswordConfirmActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder.SFBNRForSS"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            android:isScrollContainer="true"/>
+        <activity
+            android:theme="@style/Theme.ExtendedAppBarSupport.ActionBar"
+            android:label="@string/set_secure_folder_pass"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.SmartSwitchPasswordSetupActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder.SFBNRForSS"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            android:isScrollContainer="true"/>
+        <activity
+            android:theme="@style/TransparentThemeBackgroundDimDisabled"
+            android:name="com.samsung.knox.securefolder.backupandrestore.p042ui.view.SmartSwitchGateActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder.SFBNRForSS"
+            android:excludeFromRecents="true"
+            android:configChanges="density|screenSize|orientation|keyboardHidden"/>
+        <service
+            android:name="com.samsung.knox.securefolder.backupandrestore.BackupRestoreService"
+            android:permission="com.samsung.knox.securefolder.backuprestore.SS_ACCESS"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <service
+            android:name="com.samsung.knox.securefolder.backupandrestore.cloud.CloudService"
+            android:permission="com.samsung.knox.securefolder.backuprestore.SS_ACCESS"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <receiver
+            android:name="com.samsung.knox.securefolder.backupandrestore.SmartSwitchReceiver"
+            android:permission="com.wssnps.permission.COM_WSSNPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.android.intent.action.REQUEST_BACKUP_SFOLDER_SETUP"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_CANCEL_SFOLDER_SETUP"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_BACKUP_SFOLDER"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_RESTORE_SFOLDER"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_BACKUP_FINISH_SFOLDER"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_RESTORE_FINISH_SFOLDER"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.backupandrestore.SmartSwitchActionReceiver"
+            android:permission="com.wssnps.permission.COM_WSSNPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.android.intent.action.REQUEST_BACKUP_SFOLDER_V2"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_SFOLDER_DATA_PREPARED"/>
+                <action android:name="com.samsung.android.intent.action.REQUEST_RESTORE_SFOLDER_V2"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.backupandrestore.ContainerCreationReceiver"
+            android:permission="com.wssnps.permission.COM_WSSNPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.android.intent.action.REQUEST_CREATE_SFOLDER"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/AddFilesActivityTheme"
+            android:name="com.samsung.knox.securefolder.rcpcomponents.addfiles.view.AddFilesActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.samsung.knox.securefolder.rcpcomponents.move.activity.MoveToKnoxGateActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:configChanges="density|screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/ShareViaTheme"
+            android:label="@string/copy_to_secure_folder"
+            android:icon="@drawable/my_files"
+            android:name="com.samsung.knox.securefolder.rcpcomponents.move.activity.B2CStoreFilesActivity"
+            android:permission="com.samsung.knox.securefolder.REMOTE_CONTENT_PROVIDER"
+            android:enabled="false"
+            android:exported="true"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity-alias
+            android:theme="@style/ShareViaTheme"
+            android:label="@string/copy_to_secure_folder"
+            android:icon="@drawable/my_files"
+            android:name="com.samsung.knox.securefolder.presentation.switcher.view.B2CStoreFilesActivity"
+            android:permission="com.samsung.knox.securefolder.REMOTE_CONTENT_PROVIDER"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:targetActivity="com.samsung.knox.securefolder.rcpcomponents.move.activity.B2CStoreFilesActivity">
+            <intent-filter>
+                <action android:name="com.sec.knox.action.storeData"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/x-vcard"/>
+                <data android:mimeType="text/x-vCard"/>
+                <data android:mimeType="text/vcard"/>
+                <data android:mimeType="text/x-vcalendar"/>
+                <data android:mimeType="text/x-vCalendar"/>
+                <data android:mimeType="text/calendar"/>
+                <data android:mimeType="text/x-vtodo"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/*"/>
+            </intent-filter>
+        </activity-alias>
+        <service
+            android:name="com.samsung.knox.securefolder.rcpcomponents.move.handlers.FileOperationsHandler"
+            android:permission="com.sec.knox.bridge.permission.FILE_OPERATION_HANDLER"
+            android:exported="true"
+            android:stopWithTask="false"
+            android:foregroundServiceType="dataSync">
+            <intent-filter>
+                <action android:name="com.sec.knox.bridge.service.ACTION_FILE_OPERATIONS"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.samsung.knox.securefolder.backuprestore.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider"/>
+        </provider>
+        <provider
+            android:name="com.samsung.knox.securefolder.rcpcomponents.move.provider.KnoxContentMgrDbProvider"
+            android:permission="com.samsung.knox.rcp.permission.ACCESS_KNOX_CONTENT_MGR_DB_PROVIDER"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.samsung.knox.securefolder.rcpcomponents.move.provider.knoxcontentmgrdbprovider"/>
+        <provider
+            android:name="com.samsung.knox.securefolder.rcpcomponents.provider.RemoteContentProvider"
+            android:exported="false"
+            android:authorities="com.samsung.knox.securefolder.rcpcomponents.RemoteContentProvider"
+            android:grantUriPermissions="true"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.SecureFolderMainSettingActivity"
+            android:exported="true"
+            android:taskAffinity="com.samsung.knox.securefolder"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation">
+            <intent-filter>
+                <action android:name="android.settings.SETTINGS"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.OtherSecurityActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.AutoLockActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.NotificationsAndDataActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.NotificationsActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupportWindowBackgroundTheme"
+            android:label="@string/quick_switch"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.QuickSwitchActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.MoreActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupport"
+            android:label="@string/open_source_licenses"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.OpenSourceLicensesActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@style/DialogActivityStyle"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.AddSecureFolderDialogActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/DialogActivityStyle"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.UninstallDialogsActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|screenLayout|orientation"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupportAboutActionBar"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.AboutActivity"
+            android:exported="true"
+            android:taskAffinity="com.samsung.knox.securefolder"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.android.settings.suggested.category.SEC_NEW_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.title"
+                android:value="@string/app_real_name"/>
+        </activity>
+        <activity
+            android:theme="@style/DescriptionActivityStyle"
+            android:label="@string/encrypt"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.EncryptActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder"
+            android:launchMode="singleTop"/>
+        <service
+            android:name="com.samsung.knox.settings.securefolder.view.service.UninstallBackupNotificationService"
+            android:permission="com.samsung.knox.securefolder.backuprestore.SS_ACCESS"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <activity
+            android:name="com.samsung.knox.settings.securefolder.view.activity.SecureFolderSettingsGatewayActivity"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.samsung.knox.securefolder.action.SETTINGS_START"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/NoHomeButtonNoTitle"
+            android:label="@string/secure_folder_settings"
+            android:name="com.samsung.knox.settings.securefolder.view.activity.SettingsGateActivity"
+            android:exported="false"
+            android:taskAffinity="com.samsung.knox.securefolder"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation"/>
+        <provider
+            android:name="com.samsung.knox.settings.securefolder.provider.SettingSearchIndexablesProvider"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true"
+            android:authorities="com.samsung.knox.settings.securefolder.provider.SettingSearchIndexablesProvider"
+            android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.samsung.android.settings.require_settings_key"
+                android:value="PREFERENCE_SCREEN_SETTINGS_MAIN"/>
+            <meta-data
+                android:name="com.samsung.android.settings.require_settings_title"
+                android:value="@string/secure_folder_settings"/>
+            <meta-data
+                android:name="com.samsung.android.settings.require_config_changes"
+                android:value="userID"/>
+        </provider>
+        <activity
+            android:theme="@style/AddAppsActivityTheme"
+            android:name="com.samsung.knox.securefolder.launcher.addapps.view.AddAppsActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/add_apps_searchable"/>
+        </activity>
+        <receiver
+            android:name="com.samsung.knox.securefolder.launcher.shortcut.UpdateSecureFolderShortcutReceiver"
+            android:permission="com.wssnps.permission.COM_WSSNPS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.android.intent.action.REQUEST_UPDATE_SFOLDER_SHORTCUTS"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/LockTypeSettingActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.LockPasswordActivity"
+            android:exported="false"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/LockTypeSettingActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.LockPinActivity"
+            android:exported="false"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/LockTypePreferenceActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.LockTypeDeciderActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|mnc|mcc"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/LockTypePreferenceActivityTheme"
+            android:label="@string/app_name_blank"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.LockTypePreferenceActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|mnc|mcc"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.SetupSamsungAccountActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|mnc|mcc"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/DescriptionActivityStyle"
+            android:label="@string/app_name_blank"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.ProvisioningActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|navigation|keyboardHidden|keyboard|touchscreen|mnc|mcc"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.SetupActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="fontScale|layoutDirection|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|mnc|mcc"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/ExtendedAppBarSupportWindowBackgroundTheme"
+            android:label="@string/terms_and_conditions"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.TermAndConditionActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/WelcomeActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.WelcomeActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:configChanges="orientation"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/LockTypeSettingActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.setup.view.SetLockPatternActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"/>
+        <activity
+            android:theme="@style/SwitchAliasActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.switcher.view.SwitchAliasActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="unspecified"
+            android:configChanges="screenSize|orientation"
+            android:resizeableActivity="false"/>
+        <activity-alias
+            android:name="com.samsung.knox.securefolder.switcher.SwitchAliasActivity"
+            android:exported="true"
+            android:targetActivity="com.samsung.knox.securefolder.provisioning.switcher.view.SwitchAliasActivity"/>
+        <activity
+            android:theme="@style/SwitchAliasActivityTheme"
+            android:name="com.samsung.knox.securefolder.provisioning.switcher.view.SwitchActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="unspecified"
+            android:configChanges="screenSize|orientation"
+            android:resizeableActivity="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sec.knox.securefolder.CREATE_SECURE_FOLDER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sec.android.intent.action.SEC_APPLICATION_SETTINGS"/>
+                <category android:name="com.sec.android.intent.category.SEC_APPLICATION_SETTINGS"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.samsung.knox.securefolder.provisioning.setup.service.ContainerCreationService"
+            android:permission="com.samsung.knox.securefolder.backuprestore.SS_ACCESS"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="">
+            <meta-data
+                android:name="com.samsung.android.multiuser.install_only_owner"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="com.samsung.knox.securefolder.action.CREATION_START_BY_SMART_SWITCH"/>
+                <action android:name="com.samsung.knox.securefolder.action.CREATION_START_BY_CLOUD_CLIENT"/>
+                <action android:name="com.samsung.knox.securefolder.action.CREATION_START"/>
+            </intent-filter>
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="com.samsung.knox.securefolder"/>
+        </service>
+        <receiver
+            android:name="com.samsung.knox.securefolder.provisioning.receiver.MyPackageReplacedReceiver"
+            android:exported="true">
+            <intent-filter android:priority="99999">
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.provisioning.receiver.LoginAccountChangedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.samsung.knox.securefolder.provisioning.receiver.RetailModeReceiver"
+            android:permission="com.samsung.sea.retailagent.permission.RETAILMODE"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.sea.rm.DEMO_RESET_STARTED"/>
+                <action android:name="com.samsung.sea.rm.DEMO_RESET_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.samsung.android.mobileservice.AppId"
+            android:value="@string/secure_folder_app_id"/>
+        <activity
+            android:theme="@style/PermissionActivityTheme"
+            android:name="com.samsung.knox.securefolder.common.view.PermissionsActivity"
+            android:exported="false"/>
+        <receiver
+            android:name="com.samsung.knox.securefolder.common.util.logging.LoggingReceiver"
+            android:permission="com.sec.knox.permission.KEYGUARD_SERVICE"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.knox.securefolder.salogging"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.samsung.knox.launcher.debugscreen.view.DebugScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.samsung.android.knox.action.SECURE_FOLDER_DEBUG_SCREEN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Home"
+            android:name="com.samsung.knox.launcher.home.view.HomeActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/Home"
+            android:name="com.samsung.knox.launcher.home.view.FolderActivity"
+            android:exported="false"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/DisableAppDialogActivityStyle"
+            android:name="com.samsung.knox.launcher.home.view.disable.DisableAppActivity"
+            android:exported="false"/>
+        <activity
+            android:theme="@style/BaseActivityTheme"
+            android:name="com.samsung.knox.launcher.search.view.SearchActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/launcher_searchable"/>
+        </activity>
+        <activity
+            android:theme="@style/BaseActivityTheme"
+            android:name="com.samsung.knox.launcher.customize.view.CustomizeActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:theme="@style/TransparentTheme"
+            android:name="com.samsung.knox.launcher.home.view.FolderShortcutActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"/>
+        <service
+            android:name="com.samsung.knox.launcher.badgecount.service.NotificationListenerService"
+            android:exported="true">
+            <meta-data
+                android:name="com.samsung.android.notification.listener.trim"
+                android:value="1"/>
+        </service>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.samsung.knox.securefolder.androidx-startup">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.samsung.android.sdk.bixby2.provider.CapsuleProvider"
+            android:exported="true"
+            android:authorities="com.samsung.knox.securefolder.CapsuleProvider"/>
+        <meta-data
+            android:name="com.samsung.android.sdk.bixby2.companionApp"
+            android:value="true"/>
+        <meta-data
+            android:name="com.samsung.android.sdk.bixby2.version"
+            android:value="@string/sdk_version"/>
+        <meta-data
+            android:name="SPDE.build.signature"
+            android:value="41949bcf6e8f3771ad5d067ea229d64af51ced01/123279963/release/SecureFolderStub-100037-1.9.00"/>
+        <meta-data
+            android:name="SPDE.env.version"
+            android:value="8.0.2/G34.1.13/1.1.4"/>
+    </application>
+</manifest>
